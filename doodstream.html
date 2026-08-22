@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+========================================
+ Template Author : DEN ABI
+ Ownership      : Hak cipta dilindungi
+ Notice         : DILARANG memperjualbelikan
+                  template ini tanpa izin
+                  tertulis dari author.
+========================================
+-->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoodStream Pro Style</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .video-card {
+            background-color: #222;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .video-player {
+            background-color: #000;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* GANTI URL GAMBAR DI SINI */
+            background-image: url('https://via.placeholder.com/1280x720/000000/FFFFFF?text=Poster+Film');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-player::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        /* Tombol Play */
+        .play-link {
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .play-link:hover { transform: scale(1.15); }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 40px solid #fff;
+            border-bottom: 25px solid transparent;
+            margin-left: 10px;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.5));
+        }
+
+        /* Bagian Info */
+        .video-info {
+            padding: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .video-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .video-channel {
+            color: #999;
+            font-size: 13px;
+            display: block;
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            color: #888; /* Warna Abu-abu khas Doodstream */
+            font-size: 12px;
+        }
+
+        .stat-item svg {
+            width: 14px;
+            height: 14px;
+            fill: #888; /* Warna Ikon Abu-abu */
+            margin-right: 5px;
+        }
+        
+        .download-section {
+            padding: 15px;
+        }
+
+        .btn-download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0ad4e;
+            color: #000;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .btn-download:hover { background-color: #ec971f; }
+        .btn-download:active { transform: scale(0.98); }
+
+        @media (max-width: 480px) {
+            .main-container { margin-top: 10px; padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="video-card">
+            
+            <div class="video-player">
+                <a href="LINK_TUJUAN_PLAY_DISINI" class="play-link">
+                    <div class="play-icon"></div>
+                </a>
+            </div>
+
+            <div class="video-info">
+                <span class="video-title">ganti judul video disini</span>
+                <span class="video-channel">@gantidisini</span>
+                
+                <div class="video-stats">
+                    <div class="stat-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        02:48:49
+                    </div>
+                    <div class="stat-item">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-8L4.02 8 4 20c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 6h-2V4h2v4zm3 0h-2V4h2v4zm3 0h-2V4h2v4z"/></svg>
+                        1.0 GB
+                    </div>
+                    <div class="stat-item">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                        Feb 6, 2022
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <a href="LINK_DOWNLOAD_DISINI" class="btn-download">
+                    Download Now &nbsp; ➔
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
